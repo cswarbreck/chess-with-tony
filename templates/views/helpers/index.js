@@ -76,6 +76,10 @@ module.exports = function () {
 		return date;
 	};
 
+	hbs.registerHelper('getCurrentYear', ()=>{
+		return new Date().getFullYear()
+	});
+
 	// ### Category Helper
 	// Ghost uses Tags and Keystone uses Categories
 	// Supports same interface, just different name/semantics
