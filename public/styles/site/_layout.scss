@@ -47,7 +47,7 @@ body {
 	margin: 0 0 35px;
   
 	letter-spacing: 1px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
   }
   
   p {
@@ -76,6 +76,10 @@ body {
 	  color: darken($primary, 20%);
 	}
   }
+
+#mainButton{
+	background-image: white;
+}
 
 #mainNav {
 	font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -187,23 +191,29 @@ body {
 
     vertical-align: middle;
     .brand-heading {
-      font-size: 50px;
+      font-size: 70px;
     }
     .intro-text {
-      font-size: 18px;
-    }
+      font-size: 20px;
+	}
+	.top-heading {
+	  font-size: 50px;
+	}
   }
   @media(min-width:768px) {
     height: 100%;
-	padding-top: 323px;
-    padding-bottom: 300px;
+	padding-top: 230px;
+    padding-bottom: 265px;
     .intro-body {
       .brand-heading {
-        font-size: 100px;
+        font-size: 85px;
       }
       .intro-text {
         font-size: 22px;
-      }
+	  }
+	  .top-heading {
+		font-size: 64px;
+	  }
     }
   }
 }
@@ -235,4 +245,31 @@ body {
   .content-section {
 	padding-top: 150px;
 	padding-bottom: 150px;
+  }
+
+  #eventsMain{
+	  
+	  text-align: center;
+	  color: white;
+	  background: url("https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll;
+	  background-color: black;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	
+	  position: relative;
+	  height: 100%;
+	  @include gradient-y;
+
+	  #eventsContent{
+		  padding-top: 8rem;
+		  padding-bottom: 10rem;
+
+		  #eventsHeader{
+			  text-align: left;
+			  text-transform: uppercase;
+			  padding-bottom: 2rem;
+		  }
+	  }  
   }
