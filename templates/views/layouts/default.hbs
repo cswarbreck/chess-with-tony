@@ -7,7 +7,7 @@
 		<title>Chess with Tony</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.css" rel="stylesheet">
-		<link href="/styles/main.css" rel="stylesheet">
+		{{!-- <link href="/styles/main.css" rel="stylesheet"> --}}
 
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
@@ -22,20 +22,21 @@
 		<![endif]-->
 
 	</head>
-	<body>
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+	<body>			
+{{!-- 		<nav class="navbar navbar-expand-lg navbar-light fixed-top">	
+			<div id="header">
 				<div class="container">
-					
-						
-							<div class="">
+					<div role="navigation" class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
 								<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 								</button>
-								<a href="/" class="navbar-brand">Tony Niccoli</a>
+								<a href="/" class="navbar-brand">My Site</a>
 							</div>
 							<div class="collapse navbar-collapse">
-								<ul class="nav navbar-nav navbar-right">
+								<ul class="nav navbar-nav navbar-left">
 										{{# each navLinks}}
 										<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
 											<a href="{{ href }}">{{ label }}</a>
@@ -50,10 +51,45 @@
 									{{/if}}
 								</ul>
 							</div>
-						
-					
+						</div>
+					</div>
 				</div>
-		</nav>
+			</div>
+		</nav> --}}
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      		<div class="container">
+       			 <a class="navbar-brand js-scroll-trigger" href="#page-top">Tony Niccoli</a>
+       				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         			 Menu
+          			<i class="fa fa-bars"></i>
+        			</button>
+       				<div class="collapse navbar-collapse">
+						<ul class="navbar-nav ml-auto">
+							{{# each navLinks}}
+							<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+								<a href="{{ href }}">{{ label }}</a>
+							</li>
+							{{/each}}
+						</ul>
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Useful Links <span class="caret"></span></a>
+							<ul class="dropdown-menu navbar-link">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>	
+								<li>{{#if user}}
+								<li><a href="/keystone/signout">Sign Out</a></li>
+								{{else}}
+								<li><a href="/keystone/signin">Admin Login</a></li>
+								{{/if}}</li>									
+							</ul>
+						</li>
+					</ul>
+				</div>
+            </div>
+        </nav>
 		<div id="body">
 			<!--
 				Flash messages allow you to display once-off status messages to users, e.g. form
@@ -102,12 +138,14 @@
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
 			//- you can upgrade to 2.1.4 (also bundled) for better performance.
 		--}}
-		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		<script src="/js/jquery/jquery-2.1.4.min.js"></script>
 		{{!--
 			//- Customise which Bootstrap javascript files are served by including
 			//- them specifically here, instead of bootstrap-3.3.5.min.js
 		--}}
-		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		<script src="/js/bootstrap/bootstrap.min.js"></script>
+		<script src="/js/bootstrap/grayscale.min.js"></script>
+		
 		{{{isAdminEditorJS user}}}
 	</body>
 </html>
