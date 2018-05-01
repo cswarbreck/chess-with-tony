@@ -2095,14 +2095,14 @@ tbody.collapse.show {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
+  min-width: 13rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   color: #212529;
   text-align: left;
   list-style: none;
-  font-size: 0.875rem;
-  background-color: black;
+  font-size: 1rem;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
@@ -6169,7 +6169,8 @@ a {
       #mainNav.navbar-shrink {
         padding-top: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        /* border-bottom: 1px solid fade-out(white, .7); */
+        border-bottom: 3px double rgba(255, 255, 255, 0.9);
         background: black; }
       #mainNav .nav-link.active {
         outline: none;

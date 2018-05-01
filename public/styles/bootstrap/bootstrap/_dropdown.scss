@@ -23,8 +23,8 @@
   color: $body-color; 
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
-  font-size: $font-size-sm;
-  background-color: black;
+  font-size: $font-size-base;
+  background-color:transparent;
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
