@@ -20,11 +20,11 @@
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-spacer 0 0; // override default ul
-  font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
-  color: $body-color;
+  color: $body-color; 
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
-  background-color: $dropdown-bg;
+  font-size: $font-size-sm;
+  background-color: black;
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
@@ -93,8 +93,9 @@
   border: 0; // For `<button>`s
 
   @include hover-focus {
-    color: $dropdown-link-hover-color;
+    /* color: $dropdown-link-hover-color; */
     text-decoration: none;
+    text-transform: uppercase;
     @include gradient-bg($dropdown-link-hover-bg);
   }
 
