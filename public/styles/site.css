@@ -6217,6 +6217,8 @@ a {
       font-size: 20px; }
     .masthead .intro-body .top-heading {
       font-size: 50px; }
+    .masthead .intro-body #hrTitle {
+      border-bottom: 4px solid white; }
   @media (min-width: 768px) {
     .masthead {
       height: 100%;
@@ -6254,16 +6256,15 @@ a {
 #eventsMain {
   text-align: center;
   color: white;
-  background: url("https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll;
+  background-image: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb");
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  position: relative;
+  position: inherit;
   height: 100%;
-  background-image: linear-gradient(to bottom, #555 0%, #333 100%);
-  background-repeat: repeat-x; }
+  /* @include gradient-y; */ }
   #eventsMain #eventsContent {
     padding-top: 8rem;
     padding-bottom: 10rem; }
