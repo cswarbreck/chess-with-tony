@@ -6081,13 +6081,22 @@ footer {
     max-width: 100%;
     height: auto;
 } */
+#defaultFooter {
+  color: black;
+  background-color: white;
+  font-size: 8px;
+  border-top: solid double black 3px;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  position: fixed bottom; }
+
 body {
   font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
   width: 100%;
   height: 100%;
-  color: white;
-  background-color: black; }
+  color: #fff;
+  background-color: #222; }
 
 html {
   width: 100%;
@@ -6143,7 +6152,7 @@ a {
     font-weight: 700; }
   #mainNav a {
     color: white;
-    padding: 5px; }
+    padding: 7px; }
   #mainNav .navbar-nav {
     text-transform: uppercase; }
     #mainNav .navbar-nav .nav-item {
@@ -6174,7 +6183,7 @@ a {
         padding-bottom: 10px;
         /* border-bottom: 1px solid fade-out(white, .7); */
         border-bottom: 3px double rgba(255, 255, 255, 0.9);
-        background: black; }
+        background: #222; }
       #mainNav .nav-link.active {
         outline: none;
         background-color: rgba(255, 255, 255, 0.3); }
@@ -6190,7 +6199,7 @@ a {
   text-align: center;
   color: white;
   /* background: url("https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll; */
-  background-color: black;
+  background-color: #333;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6205,8 +6214,9 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, #002f4b, #dc4225);
+    background-image: linear-gradient(to bottom, #002f4b, #333);
     /* background-image: linear-gradient(to bottom,#dc4225, black); */
+    /* background-image: linear-gradient(to bottom, #999, #000); */
     opacity: .6; }
   .masthead .intro-body {
     display: table-cell;
@@ -6271,4 +6281,15 @@ a {
     #eventsMain #eventsContent #eventsHeader {
       text-align: left;
       text-transform: uppercase;
-      padding-bottom: 2rem; }
+      padding-bottom: 2rem;
+      padding-left: 1.5rem; }
+      #eventsMain #eventsContent #eventsHeader #eventsPosts {
+        border: 2px double white;
+        border-radius: 3px;
+        box-shadow: antiquewhite;
+        background-color: #333; }
+
+#blogContent {
+  padding-top: 6rem;
+  background-color: white;
+  color: black; }

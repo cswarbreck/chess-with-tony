@@ -19,6 +19,9 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
+	'wysiwyg override toolbar': false,
+	'wysiwyg menubar': true,
+	'wysiwyg skin': 'lightgray',
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
@@ -48,6 +51,16 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable,
 });
+
+// Cloudinary setup
+
+keystone.set('cloudinary config', 
+{ 
+	cloud_name: 'dqopfy3b3', 
+	api_key: '467687716374117', 
+	api_secret: '4yzapCALnWdsTCkdyrjJzsAqH0o'
+});
+// or
 
 // Load your project's Routes
 keystone.set('routes', require('./routes'));

@@ -1,13 +1,55 @@
-<div id="eventsMain">
+{{!< default}}
+
+<div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
+    <div class="row">
+        <div class="container title text-left" style="margin-top: 13rem; margin-bottom: 11rem">
+        	<h1 class="text-light">UPCOMING EVENTS</h1>
+        </div>
+    </div>
+</div>
+<div class="container" id="blogContent">
+	<div class="row">
+		<div class="col-sm-8 col-md-9" id="">
+			<h3 class="text-weight-normal">Showing {{ data.posts.results.length}} posts.</h3>
+			<div class="container">
+				{{# each data.posts.results}}
+				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+							{{#if author.name.first}}by {{author.name.first}}{{/if}}
+					</p>
+					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
+					<p>{{{content.brief}}}</p>
+					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		<div class="col-sm-4 col-md-3">
+			<h2>Categories</h2>
+			<div style="margin-top: 70px;" class="list-group">
+				
+				<a href="/blog" class="active list-group-item">All Categories</a>
+				{{# each data.categories }}
+				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+				{{/each}}
+				
+			</div>
+		</div>
+	</div>
+	{{>pagination}}
+</div>
+
+{{!-- <div id="eventsMain">
 <div class="container" id="eventsContent">
 <div class="container" id="eventsHeader">
 	<h1>Upcoming Events</h1>
 </div>
-<div class="container">
+<div class="container" id="">
 	<div class="row">
-		<div class="col-sm-8 col-md-9">
+		<div class="col-sm-8 col-md-9" id="">
 			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
-			<div class="blog">
+			<div class="container">
 				{{# each data.posts.results}}
 				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
@@ -34,4 +76,6 @@
 	{{>pagination}}
 </div>
 </div>
-</div>
+</div> --}}
+
+
