@@ -1,5 +1,5 @@
 {{!< default}}
-
+<div class="">
 <div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
     <div class="row">
         <div class="container title text-left" style="margin-top: 13rem; margin-bottom: 11rem">
@@ -9,9 +9,11 @@
 </div>
 <div class="container" id="blogContent">
 	<div class="row">
-		<div class="col-sm-8 col-md-9" id="">
-			<h3 class="text-weight-normal">Showing {{ data.posts.results.length}} posts.</h3>
+		<div class="col-sm-8 col-md-9 px-3" id="">
 			<div class="container">
+				<h3 class="text-weight-normal">Showing {{ data.posts.results.length}} posts.</h3>
+				<hr style="border-bottom: 4px lightcoral double"></hr>
+				<br>
 				{{# each data.posts.results}}
 				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
@@ -21,6 +23,7 @@
 					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
 					<p>{{{content.brief}}}</p>
 					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
+					<hr style="border-bottom: 1px lightcoral double"></hr>
 				</div>
 				{{/each}}
 			</div>
@@ -33,11 +36,24 @@
 				{{# each data.categories }}
 				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
 				{{/each}}
-				
 			</div>
+			{{!-- <div class="btn-group btn-group-vertical btn-group-toggle" data-toggle="buttons" id="blogButtons">
+				<label class="btn active">
+					<input type="radio" name="options" id="option1" autocomplete="off" checked>
+					<a href="/blog" class="">All Categories</a>
+				</label>
+				<br style="border-bottom: double lightcoral 3px;">
+				{{# each data.categories }}
+				<label class="btn">
+					<input type="radio" name="options" id="option2" autocomplete="off">
+					<a href="{{categoryUrl key}}" class="">{{name}}</a>
+					</label>
+				{{/each}}
+			</div> --}}
 		</div>
 	</div>
 	{{>pagination}}
+</div>
 </div>
 
 {{!-- <div id="eventsMain">

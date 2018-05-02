@@ -1,21 +1,27 @@
-<div class="container">
-	<h1>Gallery</h1>
+{{!< default}}
+<div class="blog-body">
+<div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
+    <div class="row">
+        <div class="container title text-left" style="margin-top: 13rem; margin-bottom: 11rem">
+        	<h1 class="text-light">RESULTS</h1>
+        </div>
+    </div>
 </div>
 <div class="container">
 	<!-- if galleries -->
 	{{#if galleries}}
 		{{#each galleries}}
-		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
+		<h2 class="text-dark">{{name}}
 		</h2>
+		<div >{{publishedDate}}</div>
 		<div class="row gallery-images">
 				{{#if heroImage}}
-				<div class="col-sm-4 col-md-4 gallery-image">
+				<div class="col-sm-4 col-lg-2 gallery-image">
 					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}" class="img-rounded">
 				</div>
 				{{/if}}
 				<div class="col-sm-8 col-md-8">
-					<div class="row">
+					<div class="row"> 
 						{{#each images}}
 						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
 							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
@@ -29,4 +35,5 @@
 	<!-- else -->
 	<h3 class="text-muted">There are no image galleries yet.</h3>
 	{{/if}}
+</div>
 </div>

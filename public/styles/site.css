@@ -6081,6 +6081,9 @@ footer {
     max-width: 100%;
     height: auto;
 } */
+.blog-body {
+  background-color: lightgray; }
+
 #defaultFooter {
   color: black;
   background-color: white;
@@ -6128,10 +6131,15 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #007bff; }
+  /* color: $primary; */ }
+  a .true .list-group-item {
+    background-color: transparent !important;
+    border: 1px lightcoral solid !important;
+    border-radius: 5px !important;
+    color: lightcoral !important; }
   a:focus, a:hover {
-    text-decoration: none;
-    color: #004a99; }
+    color: lightcoral !important;
+    outline: none; }
 
 #mainButton {
   background-image: white; }
@@ -6182,7 +6190,7 @@ a {
         padding-top: 10px;
         padding-bottom: 10px;
         /* border-bottom: 1px solid fade-out(white, .7); */
-        border-bottom: 3px double rgba(255, 255, 255, 0.9);
+        border-bottom: 3px double lightcoral;
         background: #222; }
       #mainNav .nav-link.active {
         outline: none;
@@ -6206,7 +6214,9 @@ a {
   background-size: cover;
   position: relative;
   height: 100%;
-  background: url("https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll; }
+  /*  background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat bottom center scroll; */
+  background: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll;
+  /*  background: url("https://images.pexels.com/photos/665161/pexels-photo-665161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat bottom  scroll; */ }
   .masthead:before {
     content: '';
     position: absolute;
@@ -6233,6 +6243,7 @@ a {
     .masthead {
       height: 100%;
       padding-top: 230px;
+      /* padding-top: 330px; */
       padding-bottom: 265px; }
       .masthead .intro-body .brand-heading {
         font-size: 85px; }
@@ -6291,5 +6302,15 @@ a {
 
 #blogContent {
   padding-top: 6rem;
-  background-color: white;
-  color: black; }
+  background-color: #222;
+  color: white; }
+  #blogContent a {
+    color: white !important; }
+    #blogContent a:focus, #blogContent a:hover {
+      color: lightcoral !important;
+      outline: none; }
+    #blogContent a #blogButtons {
+      color: white !important; }
+      #blogContent a #blogButtons:focus, #blogContent a #blogButtons:hover {
+        color: lightcoral !important;
+        outline: none; }
