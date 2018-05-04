@@ -22,6 +22,10 @@ keystone.init({
 	'wysiwyg override toolbar': false,
 	'wysiwyg menubar': true,
 	'wysiwyg skin': 'lightgray',
+	'wysiwyg additional plugins': 'paste',
+	'wysiwyg additional options': {
+	  'paste_data_images': true
+	},
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',

@@ -15,7 +15,7 @@ var myStorage = new keystone.Storage({
     path: keystone.expandPath('./public/uploads/files'), // required; path where the files should be stored
     publicPath: '/public/uploads/files', // path where files will be served
   }
-});
+}); 
 
 FileUpload.add({
   name: { type: Types.Key, index: true},

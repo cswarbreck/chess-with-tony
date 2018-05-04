@@ -13,7 +13,7 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
@@ -26,9 +26,12 @@
   font-size: $font-size-base;
   background-color:transparent;
   background-clip: padding-box;
-  border: $dropdown-border-width solid $dropdown-border-color;
+/*   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  @include box-shadow($dropdown-box-shadow); */
+  border: 3px double lightcoral;
+  @include border-radius(5px);
+  @include box-shadow(white);
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)

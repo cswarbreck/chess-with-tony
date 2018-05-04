@@ -23,9 +23,9 @@ footer {
 }
 
 #defaultFooter{
-	color: black;
+	color: #222;
 	background-color: white;
-	font-size: 8px;
+	font-size: 8px !important;
 	border-top: solid double black 3px;
 	padding-bottom: 3rem;
 	padding-top: 2rem;
@@ -120,7 +120,7 @@ body {
 	  padding: 11px;
   
 	  color: white;
-	  border: 1px solid white;
+	  border: 1px solid lightcoral;
 	}
 	.navbar-brand {
 		text-transform: uppercase;
@@ -136,6 +136,7 @@ body {
 		-webkit-transition: background 0.3s ease-in-out;
 		-moz-transition: background 0.3s ease-in-out;
 		transition: background 0.3s ease-in-out;
+		
 		&:hover {
 		  color: fade(white, 80%);
 		  outline: none;
@@ -198,8 +199,8 @@ body {
   position: relative;
   height: 100%;
  /*  background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat bottom center scroll; */
-  background: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll;
- /*  background: url("https://images.pexels.com/photos/665161/pexels-photo-665161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat bottom  scroll; */
+ /*  background: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll; */
+  background: url("https://images.pexels.com/photos/665161/pexels-photo-665161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat bottom  scroll;
   &:before {
 	content: '';
 	position: absolute;
@@ -207,7 +208,7 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: linear-gradient(to bottom,#002f4b, #333);
+	background-image: linear-gradient(to bottom, #555, #002f4b);
 	/* background-image: linear-gradient(to bottom,#dc4225, black); */
 	/* background-image: linear-gradient(to bottom, #999, #000); */
 	opacity: .6; 
@@ -227,13 +228,14 @@ body {
 	  font-size: 50px;
 	}
 	#hrTitle{
-		border-bottom: 4px solid white;
+		border-bottom: 3px double lightcoral;
+		max-width: 600px;
 	}
   }
   @media(min-width:768px) {
     height: 100%;
-	padding-top: 230px;
-	/* padding-top: 330px; */
+	/* padding-top: 230px; */
+	padding-top: 330px;
     padding-bottom: 265px;
     .intro-body {
       .brand-heading {
@@ -274,8 +276,8 @@ body {
   }
   
   .content-section {
-	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-top: 300px;
+	padding-bottom: 300px;
   }
 
   #eventsMain{
