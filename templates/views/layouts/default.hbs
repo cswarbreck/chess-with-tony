@@ -72,22 +72,23 @@
 								
 							</li>
 							{{/each}}
-							
+														
 						</ul>
 						
-						<li class="nav dropdown">
+						<li class="nav dropdown" id="navDropdown">
 							
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Useful Links <span class="caret"></span></a>
-							<ul class="dropdown-menu my-3 text-right" style="">
-								<li class=""><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<hr></hr>	
+							<ul class="dropdown-menu my-3 text-center" style="">
+								<li class=""><a href="#">Barnet Knights</a></li>
+								<li><a href="#">Chess League</a></li>
+								<li><a href="#">Red Hot Pawn</a></li>
+								
+								<hr style="border-top: 1px solid lightseagreen"></hr>	
+
 								<li style="text-align:center">{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
+								<li class="text-center"><a href="/keystone/signout"><i class="fa fa-lock animated"></i>  Sign Out</a></li>
 								{{else}}
-								<li><a href="/keystone/signin">Admin Login</a></li>
+								<li class="text-center"><a href="/keystone/signin"><i class="fa fa-user "></i>  Admin Login</a></li>
 								{{/if}}</li>	
 															
 							</ul>
@@ -95,6 +96,7 @@
 				</div>
             </div>
         </nav>
+
 		<div id="body">
 			<!--
 				Flash messages allow you to display once-off status messages to users, e.g. form
@@ -135,7 +137,7 @@
 
 		<div class="py-3" id="defaultFooter">
         <div class="container" style="margin-top: 0.5rem">
-          <p class="text-center">Copyright &copy; {{getCurrentYear}} Tony Niccoli. Design by <a href="https://github.com/cswarbreck">C.G. Swarbreck Ltd</a>.</p>
+          <p class="text-center">Copyright &copy; {{getCurrentYear}} Tony Niccoli. Design by C.G. Swarbreck Ltd. <a href="https://github.com/cswarbreck"> <i class="fa fa-github-alt"></i> </a>.</p>
         </div>
       </div>
 		{{!--

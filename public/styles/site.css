@@ -2120,12 +2120,15 @@ tbody.collapse.show {
   font-size: 1rem;
   background-color: transparent;
   background-clip: padding-box;
-  /*   border: $dropdown-border-width solid $dropdown-border-color;
-  @include border-radius($dropdown-border-radius);
-  @include box-shadow($dropdown-box-shadow); */
+  /* border: $dropdown-border-width solid $dropdown-border-color; */
+  /*  @include border-radius($dropdown-border-radius);
+  @include box-shadow($dropdown-box-shadow);
   border: 3px double lightcoral;
-  border-radius: 5px;
-  box-shadow: white; }
+  @include border-radius(5px);
+  @include box-shadow(white); */
+  border-top: 1px lightseagreen solid;
+  border-bottom: 1px lightseagreen solid;
+  border-radius: 20px; }
 
 .dropup .dropdown-menu {
   margin-top: 0;
@@ -6174,7 +6177,8 @@ a {
     color: lightcoral !important; }
   a:focus, a:hover {
     color: lightcoral !important;
-    outline: none; }
+    outline: none;
+    text-decoration: none !important; }
 
 #mainButton {
   background-image: white; }
@@ -6188,7 +6192,7 @@ a {
     text-transform: uppercase;
     font-size: 14px;
     padding: 11px;
-    color: white;
+    color: lightseagreen;
     border: 1px solid lightcoral; }
   #mainNav .navbar-brand {
     text-transform: uppercase;
@@ -6225,7 +6229,8 @@ a {
         padding-top: 10px;
         padding-bottom: 10px;
         /* border-bottom: 1px solid fade-out(white, .7); */
-        border-bottom: 3px double lightcoral;
+        border-bottom: 1px solid lightcoral;
+        border-bottom: 2px solid lightseagreen;
         background: #222; }
       #mainNav .nav-link.active {
         outline: none;

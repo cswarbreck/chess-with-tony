@@ -96,10 +96,10 @@ body {
 			&:hover {
 			color: lightcoral !important;
 			outline: none;
+			text-decoration: none !important;
+			
 			}
   }
-
-
 
 
 #mainButton{
@@ -119,7 +119,7 @@ body {
   
 	  padding: 11px;
   
-	  color: white;
+	  color: lightseagreen;
 	  border: 1px solid lightcoral;
 	}
 	.navbar-brand {
@@ -168,7 +168,8 @@ body {
 		padding-bottom: 10px;
   
 		/* border-bottom: 1px solid fade-out(white, .7); */
-		border-bottom: 3px double lightcoral;
+		border-bottom: 1px solid lightcoral;
+		border-bottom: 2px solid lightseagreen;
 		background: #222;
 	  }
 	  .nav-link.active {
@@ -338,4 +339,4 @@ body {
 			}
 	  }
 
-  }
+	}

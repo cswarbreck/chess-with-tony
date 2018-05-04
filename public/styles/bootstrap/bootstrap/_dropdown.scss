@@ -26,12 +26,16 @@
   font-size: $font-size-base;
   background-color:transparent;
   background-clip: padding-box;
-/*   border: $dropdown-border-width solid $dropdown-border-color;
-  @include border-radius($dropdown-border-radius);
-  @include box-shadow($dropdown-box-shadow); */
+  /* border: $dropdown-border-width solid $dropdown-border-color; */
+ /*  @include border-radius($dropdown-border-radius);
+  @include box-shadow($dropdown-box-shadow);
   border: 3px double lightcoral;
   @include border-radius(5px);
-  @include box-shadow(white);
+  @include box-shadow(white); */
+  border-top: 1px lightseagreen solid;
+  border-bottom: 1px lightseagreen solid;
+  border-radius: 20px;
+
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
