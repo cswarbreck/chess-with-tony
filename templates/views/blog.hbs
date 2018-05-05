@@ -1,6 +1,6 @@
 {{!< default}}
 <div class="">
-<div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
+<div class="hero" style="background: url('https://images.pexels.com/photos/541538/pexels-photo-541538.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center center">
     <div class="row">
         <div class="container title text-left" style="margin-top: 13rem; margin-bottom: 11rem">
         	<h1 class="text-light">UPCOMING EVENTS</h1>
@@ -29,15 +29,19 @@
 				{{/each}}
 			</div>
 		</div>
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
+		
+		<div class="col-sm-4 col-md-3 text-center" style="" >
+			<h2>CATEGORIES</h2>
+			<div class="list-group text-center" style="font-size: 16px">
 				
-				<a href="/blog" class="active list-group-item">All Categories</a>
+				<a href="/blog" id="active" style="">All Categories</a>
+				<br style="border-bottom: solid 3px lightseagreen !important">
 				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+				<a href="{{categoryUrl key}}" class="false">{{name}}</a>
 				{{/each}}
 			</div>
+			
+
 			{{!-- <div class="btn-group btn-group-vertical btn-group-toggle" data-toggle="buttons" id="blogButtons">
 				<label class="btn active">
 					<input type="radio" name="options" id="option1" autocomplete="off" checked>

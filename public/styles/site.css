@@ -2128,7 +2128,8 @@ tbody.collapse.show {
   @include box-shadow(white); */
   border-top: 1px lightseagreen solid;
   border-bottom: 1px lightseagreen solid;
-  border-radius: 20px; }
+  border-radius: 20px;
+  box-shadow: 4px lightcoral; }
 
 .dropup .dropdown-menu {
   margin-top: 0;
@@ -6100,25 +6101,18 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
-/* #header {
-	margin-top: 0px;
-}
+.parallax1 {
+  /* The image used */
+  /* 	background-image: url("https://images.pexels.com/photos/112854/pexels-photo-112854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+  background-image: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  /* Set a specific height */
+  height: 400px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-
-
-footer {
-	margin-top: 6rem;
-	margin-bottom: 3rem;
-	border-top: 1px solid #777777;
-	padding-top: 30px;
-	color: #777777;
-}
-
-.gallery-image img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-} */
 .blog-body {
   background-color: lightgray; }
 
@@ -6350,8 +6344,5 @@ a {
     #blogContent a:focus, #blogContent a:hover {
       color: lightcoral !important;
       outline: none; }
-    #blogContent a #blogButtons {
-      color: white !important; }
-      #blogContent a #blogButtons:focus, #blogContent a #blogButtons:hover {
-        color: lightcoral !important;
-        outline: none; }
+    #blogContent a #active {
+      color: lightseagreen !important; }
