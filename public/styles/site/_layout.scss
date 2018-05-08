@@ -163,8 +163,8 @@ body {
 		padding-bottom: 10px;
   
 		/* border-bottom: 1px solid fade-out(white, .7); */
-		border-bottom: 1px solid lightcoral;
-		border-bottom: 2px solid lightseagreen;
+		
+		border-bottom: 3px double lightcoral;
 		background: #222;
 	  }
 	  .nav-link.active {
@@ -195,8 +195,9 @@ body {
   position: relative;
   height: 100%;
  /*  background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb') no-repeat bottom center scroll; */
- /*  background: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll; */
-  background: url("https://images.pexels.com/photos/665161/pexels-photo-665161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat bottom  scroll;
+  /* background: url("https://images.pexels.com/photos/700971/pexels-photo-700971.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat bottom center scroll; */
+	/* background: url("https://images.pexels.com/photos/665161/pexels-photo-665161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat bottom  scroll; */
+	background: url("https://images.unsplash.com/photo-1503332132010-d1b77a049ddd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=49016a52e96d5176453fda05957035c9&auto=format&fit=crop&w=1950&q=80") no-repeat bottom center scroll;
   &:before {
 	content: '';
 	position: absolute;
@@ -230,8 +231,8 @@ body {
   }
   @media(min-width:768px) {
     height: 100%;
-	/* padding-top: 230px; */
-	padding-top: 330px;
+	padding-top: 230px;
+	/* padding-top: 330px; */
     padding-bottom: 265px;
     .intro-body {
       .brand-heading {
