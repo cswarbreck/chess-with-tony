@@ -2,8 +2,8 @@
 <div class="">
 <div class="hero" style="background: url('https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=afeb5d54d5a2e04cb0da179c696bf009&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center center">
     <div class="row">
-        <div class="container title text-left" style="margin-top: 15rem; margin-bottom: 13rem">
-        	<h1 class="text-light">UPCOMING EVENTS</h1>
+        <div class="container title text-left" style="margin-top: 15rem; margin-bottom: 13rem" id="blogHeader">
+        	<h1 class="" style="" >NOTICE BOARD</h1>
         </div>
     </div>
 	<hr style="border-bottom: 3px double lightcoral;">
@@ -32,6 +32,8 @@
 		</div>
 		
 		<div class="col-sm-4 col-md-3 text-center" style="" >
+			<div class="container" style="border: 1px double lightcoral; border-radius: 1px">
+				<br>
 			<h2>CATEGORIES</h2>
 			<div class="list-group text-center" style="font-size: 16px">
 				
@@ -40,6 +42,8 @@
 				{{# each data.categories }}
 				<a href="{{categoryUrl key}}" class="false">{{name}}</a>
 				{{/each}}
+				<br>
+				</div>
 			</div>
 			
 

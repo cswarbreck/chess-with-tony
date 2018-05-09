@@ -331,3 +331,23 @@ body {
 	  }
 
 	}
+
+	#blogHeader{
+		@supports 
+  ((-webkit-text-stroke-color: #666)
+  and
+  (-webkit-text-fill-color: white))
+  or
+  ((-moz-text-stroke-color: #666)
+  and
+  (-moz-text-fill-color: white)) {
+  h1 {
+       -moz-text-fill-color: white !important;
+    -webkit-text-fill-color: white !important;
+       -moz-text-stroke-color: #222 !important;
+    -webkit-text-stroke-color: #222 !important;
+       -moz-text-stroke-width: 1px !important; 
+    -webkit-text-stroke-width: 1px !important;
+  }
+}
+	}
