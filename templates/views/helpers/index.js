@@ -4,6 +4,7 @@ var hbs = require('handlebars');
 var keystone = require('keystone');
 var cloudinary = require('cloudinary');
 
+
 // Collection of templates to interpolate
 var linkTemplate = _.template('<a href="<%= url %>"><%= text %></a>');
 var scriptTemplate = _.template('<script src="<%= src %>"></script>');

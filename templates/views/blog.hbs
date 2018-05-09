@@ -19,8 +19,10 @@
 				{{# each data.posts.results}}
 				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+					<h5>Published {{_.publishedDate.format "D MMMM YYYY"}}</h5>
 					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
+							{{#if author.name.first}}by {{author.name.first}} {{/if}}
+							
 					</p>
 					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
 					<p>{{{content.brief}}}</p>
@@ -65,6 +67,7 @@
 	{{>pagination}}
 </div>
 </div>
+{{>footer}}
 
 {{!-- <div id="eventsMain">
 <div class="container" id="eventsContent">

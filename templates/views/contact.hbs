@@ -1,51 +1,130 @@
+<div class="contact">
 {{!< default}}
-<div class="">
-<div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
-    <div class="row">
-        <div class="container title text-left" style="margin-top: 13rem; margin-bottom: 11rem">
-        	<h1 class="text-light">RESULTS</h1>
-        </div>
-    </div>
-</div>
-<div class="container">
+
+<div class="container" id="contact-header">
 	<div class="row">
-		<div class="col-sm-8 col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
-				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-				</div>
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
-						<option value="">(select one)</option>
-						{{#each enquiryTypes}}
-						<option value="{{value}}">{{label}}</option>
-						{{/each}}
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-outline-warning">Send</button>
-				</div>
-			</form>
-			{{/if}}
+		
+		<div class="col-sm-6">
+			<h2>GETTING IN TOUCH</h2>
+			<hr style="border-bottom: 3px double lightcoral; border-radius: 10px"></hr>
+				<br>
+			<p class="intro-text">To find out more about booking lessons for your child or for any other enquires, please fill out the contact form below and I will make every effort to get back to you at the soonest possible time.
+				<br>
+			</p>
+			<p class="intro-text">If you can think of anything else to put here I can add it for you when we meet to discuss the site.				
+			</p>
+		</div>
+
+		<div class="col-sm-1">
+		</div>
+		
+		<div class="col-sm-5">
+			<section class="text-left" id="contact-form">
+				{{#if enquirySubmitted}}
+					<h3>Thanks for getting in touch.</h3>
+						{{else}}
+						<form method="post">
+						<input type="hidden" name="action" value="contact">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Name</label>
+							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+						</div>
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<label>Email</label>
+							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+						</div>
+						<div class="form-group">
+							<label>Telephone</label>
+							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+						</div>
+						<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+							<label>What would you like to find out?</label>
+							<select name="enquiryType" class="form-control">
+								<option value="">(select one)</option>
+								{{#each enquiryTypes}}
+								<option value="{{value}}">{{label}}</option>									{{/each}}
+							</select>
+						</div>
+						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+							<label>Message</label>
+							<textarea name="message" placeholder="Please leave your message here, including any pertinent contact information..." rows="4" class="form-control">{{formData.message}}</textarea>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn" id="contact-button">Send</button>
+						</div>
+					</form>
+				{{/if}}
+			</section>
 		</div>
 	</div>
 </div>
 </div>
+{{>footer}}
+
+{{!--     
+		
+			<div class="container" id="contact-header">
+				<div class="row">
+					<div class="col-lg-8 mx-auto">
+						<h2 class="brand-heading">CONTACT TONY</h2>
+						<hr style="border-bottom: 3px double lightcoral; border-radius: 10px"></hr>
+							<br>
+						<p class="intro-text">To find out more about booking lessons for your child or for any other enquires, please fill out the contact form below and I will make every effort to get back to you at the soonest possible time.
+							<br>
+						</p>
+						<p class="intro-text">If you can think of anything else to put here I can add it for you when we meet to discuss the site.
+							
+						</p>					
+					</div>
+				</div>
+
+		<section class="text-left" id="contact-form">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-md-6">
+						{{#if enquirySubmitted}}
+						<h3>Thanks for getting in touch.</h3>
+						{{else}}
+						<form method="post">
+							<input type="hidden" name="action" value="contact">
+							<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+								<label>Name</label>
+								<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+							</div>
+							<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+								<label>Email</label>
+								<input type="email" name="email" class="form-control" value="{{formData.email}}">
+							</div>
+							<div class="form-group">
+								<label>Telephone</label>
+								<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+							</div>
+							<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+								<label>What would you like to find out?</label>
+								<select name="enquiryType" class="form-control">
+									<option value="">(select one)</option>
+									{{#each enquiryTypes}}
+									<option value="{{value}}">{{label}}</option>
+									{{/each}}
+								</select>
+							</div>
+							<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+								<label>Message</label>
+								<textarea name="message" placeholder="Please leave your message here, including any pertinent contact information..." rows="4" class="form-control">{{formData.message}}</textarea>
+							</div>
+							<div class="form-actions">
+								<button type="submit" class="btn btn-outline-warning">Send</button>
+							</div>
+						</form>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
+{{>footer}} --}}
+
+
+
