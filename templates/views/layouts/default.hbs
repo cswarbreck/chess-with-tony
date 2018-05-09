@@ -65,7 +65,7 @@
          			 Menu          			
         			</button>
        				<div class="collapse navbar-collapse" id="navbarResponsive">
-						<ul class="navbar-nav ml-auto"  style="padding-left: 10px">
+						<ul class="navbar-nav ml-auto"  style="">
 							{{# each navLinks}}
 							<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
 								<a href="{{ href }}" style="padding-left: 30px">{{ label }}</a>
@@ -78,17 +78,17 @@
 						<li class="nav dropdown" id="navDropdown">
 							
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-left: 30px">Useful Links <span class="caret"></span></a>
-							<ul class="dropdown-menu my-3 text-center" style="">
-								<li class=""><a href="#">Barnet Knights</a></li>
-								<li><a href="#">Chess League</a></li>
-								<li><a href="#">Red Hot Pawn</a></li>
+							<ul class="dropdown-menu text-center" style="margin-top: 3rem">
+								<li class=""><a href="#" style="font-size: 0.85rem !important">Barnet Knights</a></li>
+								<li><a href="#" style="font-size: 0.85rem !important">Chess League</a></li>
+								<li><a href="#" style="font-size: 0.85rem !important">Red Hot Pawn</a></li>
 								
-								<hr style="border-top: 1px solid lightseagreen"></hr>	
+								<hr style="border-top: 3px double white"></hr>	
 
 								<li style="text-align:center">{{#if user}}
-								<li class="text-center"><a href="/keystone/signout"><i class="fa fa-lock animated"></i>  Sign Out</a></li>
+								<li class="text-center"><a href="/keystone/signout" style="font-size: 0.95rem !important"><i class="fa fa-lock animated"></i>  Sign Out</a></li>
 								{{else}}
-								<li class="text-center"><a href="/keystone/signin"><i class="fa fa-user "></i>  Admin Login</a></li>
+								<li class="text-center"><a href="/keystone/signin" style="font-size: 0.95rem !important"><i class="fa fa-user "></i>  Admin Login</a></li>
 								{{/if}}</li>	
 															
 							</ul>

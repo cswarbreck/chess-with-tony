@@ -17,14 +17,14 @@
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: $dropdown-min-width;
+  min-width: 250px;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-spacer 0 0; // override default ul
   color: $body-color; 
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   font-size: $font-size-base;
-  background-color:transparent;
+  background-color: rgba(34, 34, 34, 0.7);
   background-clip: padding-box;
   /* border: $dropdown-border-width solid $dropdown-border-color; */
  /*  @include border-radius($dropdown-border-radius);
@@ -32,10 +32,8 @@
   border: 3px double lightcoral;
   @include border-radius(5px);
   @include box-shadow(white); */
-  border-top: 1px lightseagreen solid;
-  border-bottom: 1px lightseagreen solid;
-  border-radius: 20px;
-  box-shadow: 4px lightcoral;
+  border-top: 1px lightcoral solid;
+  border-bottom: 1px lightcoral solid;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
