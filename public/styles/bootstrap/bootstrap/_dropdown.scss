@@ -32,8 +32,8 @@
   border: 3px double lightcoral;
   @include border-radius(5px);
   @include box-shadow(white); */
-  border-top: 1px lightcoral solid;
-  border-bottom: 1px lightcoral solid;
+  border-top: 1px lightseagreen solid;
+  border-bottom: 1px lightseagreen solid;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)

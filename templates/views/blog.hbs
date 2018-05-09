@@ -1,110 +1,83 @@
-{{!< default}}
-<div class="">
-<div class="hero" style="background: url('https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=afeb5d54d5a2e04cb0da179c696bf009&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center center">
-    <div class="row">
-        <div class="container title text-left" style="margin-top: 15rem; margin-bottom: 13rem" id="blogHeader">
-        	<h1 class="" style="" >NOTICE BOARD</h1>
+<div class="notice-board">
+    <div class="container" id="notice-header">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>NOTICE BOARD</h2>
+                <hr style="border-bottom: 3px double lightcoral; border-radius: 10px"></hr>
+                <br>
+                <p>You will be able to make posts in various categories when you create the post. This way, you can put new tournaments, lesson times or results up and it's all in one place. It is not currently possible to add a pdf but if you want to, you can link to your Google Drive.
+                    <br>
+                </p>
+                <p>Use the category selector to choose which category you want to view.
+                </p>
+            </div>
+			<div class="col-sm-4" >
+                <div class="container" style="border: 1px double white; border-radius: 3px" id="notice-categories">
+                    <br>
+                    <h4 class="text-center">CATEGORIES</h4>
+                    <div class="list-group text-center" style="font-size: 16px">
+
+                        <a href="" id="active" style="color: lightcoral !important">All Categories</a>
+                        <br style="border-bottom: solid 3px lightseagreen !important"> {{# each data.categories }}
+                        <a href="{{categoryUrl key}}" href="#notice-posts" class="false">{{name}}</a>
+                        {{/each}}
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="container" id="notice-content">
+        <div class="row">
+            <div class="col-sm-7" id="notice-posts">
+				{{#if categoryList}}
+				<h3> {{{categoryList data.post.categories prefix="Posted in "}}} .</h3>
+				{{/if}}
+            
+                <h3>Showing {{ data.posts.results.length}} posts.</h3>
+                <br>
+                <hr style="border-bottom: 4px lightseagreen double"></hr>
+                <br> {{# each data.posts.results}}
+                <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+                    <h2>
+                        <a href="{{postUrl slug}}">{{{title}}}</a>
+                    </h2>
+                    <h5>Published {{_.publishedDate.format "D MMMM YYYY"}}</h5>
+                    <p class="">{{{categoryList categories prefix="Posted in "}}} {{#if author.name.first}}by {{author.name.first}} {{/if}}
+
+                    </p>
+                    {{#if image}}
+                    <img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
+                    <p>{{{content.brief}}}</p>
+                    {{#if content.extended}}
+                    <p class="read-more">
+                        <a href="{{postUrl slug}}">Read more...</a>
+                    </p>{{/if}}
+                    <hr style="border-bottom: 1px lightseagreen double"></hr>
+                </div>
+                {{/each}}
+            </div>
+			<div class="col-sm-1">
+
+			</div>
+
+            <div class="col-sm-4" >
+{{!--                 <div class="container" style="border: 1px double white; border-radius: 7px" id="notice-categories">
+                    <br>
+                    <h4 class="text-center">CATEGORIES</h4>
+                    <div class="list-group text-center" style="font-size: 16px">
+
+                        <a href="" id="active" style="color: lightcoral !important">All Categories</a>
+                        <br> 
+						{{# each data.categories }}
+                        <a href="{{categoryUrl key}}" href="#notice-posts" class="false">{{name}}</a>
+                        {{/each}}
+                        <br>
+                    </div> --}}
+                </div>
+            </div>
         </div>
     </div>
-	<hr style="border-bottom: 3px double lightcoral;">
-</div>
-<div class="container" id="blogContent">
-	<div class="row">
-		<div class="col-sm-8 col-md-9 px-3" id="">
-			<div class="container">
-				<h3 class="text-weight-normal">Showing {{ data.posts.results.length}} posts.</h3>
-				<br>
-				<hr style="border-bottom: 4px lightcoral double"></hr>
-				<br>
-				{{# each data.posts.results}}
-				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-					<h5>Published {{_.publishedDate.format "D MMMM YYYY"}}</h5>
-					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}} {{/if}}
-							
-					</p>
-					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-					<p>{{{content.brief}}}</p>
-					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
-					<hr style="border-bottom: 1px lightcoral double"></hr>
-				</div>
-				{{/each}}
-			</div>
-		</div>
-		
-		<div class="col-sm-4 col-md-3 text-center" style="" >
-			<div class="container" style="border: 1px double lightcoral; border-radius: 1px">
-				<br>
-			<h2>CATEGORIES</h2>
-			<div class="list-group text-center" style="font-size: 16px">
-				
-				<a href="/blog" id="active" style="">All Categories</a>
-				<br style="border-bottom: solid 3px lightseagreen !important">
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false">{{name}}</a>
-				{{/each}}
-				<br>
-				</div>
-			</div>
-			
-
-			{{!-- <div class="btn-group btn-group-vertical btn-group-toggle" data-toggle="buttons" id="blogButtons">
-				<label class="btn active">
-					<input type="radio" name="options" id="option1" autocomplete="off" checked>
-					<a href="/blog" class="">All Categories</a>
-				</label>
-				<br style="border-bottom: double lightcoral 3px;">
-				{{# each data.categories }}
-				<label class="btn">
-					<input type="radio" name="options" id="option2" autocomplete="off">
-					<a href="{{categoryUrl key}}" class="">{{name}}</a>
-					</label>
-				{{/each}}
-			</div> --}}
-		</div>
-	</div>
-	{{>pagination}}
-</div>
 </div>
 {{>footer}}
-
-{{!-- <div id="eventsMain">
-<div class="container" id="eventsContent">
-<div class="container" id="eventsHeader">
-	<h1>Upcoming Events</h1>
-</div>
-<div class="container" id="">
-	<div class="row">
-		<div class="col-sm-8 col-md-9" id="">
-			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
-			<div class="container">
-				{{# each data.posts.results}}
-				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</p>
-					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-					<p>{{{content.brief}}}</p>
-					{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
-				</div>
-				{{/each}}
-			</div>
-		</div>
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div style="margin-top: 70px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All Categories</a>
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
-				{{/each}}
-			</div>
-		</div>
-	</div>
-	{{>pagination}}
-</div>
-</div>
-</div> --}}
-
 
