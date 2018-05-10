@@ -1,10 +1,10 @@
-<div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
+{{!-- <div class="hero" style="background: url('https://images.pexels.com/photos/872959/pexels-photo-872959.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'); background-size: cover; background-position: center center">
     <div class="row">
         <div class="container title text-left" style="margin-top: 9rem; margin-bottom: 7rem">
         	<h1 class="text-light">{{data.post.title}}</h1>
         </div>
     </div>
-</div>
+</div> --}}
 
 {{!-- <div class="container">
 	<div class="row">
@@ -56,7 +56,7 @@
 	</div>
 </div> --}}
 
-    <div class="container" style="margin-bottom: 7.5rem; margin-top: 3.5rem; min-height: 800px">
+{{!--     <div class="container" style="margin-bottom: 7.5rem; margin-top: 3.5rem; min-height: 800px">
       <div class="row">
         <div class="col-sm-8" style="margin: auto">
           <h2 class="title text-left">
@@ -76,7 +76,32 @@
 		  {{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="card-img-top ">{{/if}}
         </div>
       </div>
-    </div>
+    </div> --}}
+<div class="posts">
+	<div class="container" id="post-header">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2 class="text-light">{{data.post.title}}</h2>
+				<hr style="border-bottom: 3px double lightseagreen; border-radius: 10px"></hr>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="post-content">
+		<div class="row">
+		<div class="col-sm-8" style="margin: auto">
+			<h3>Published {{date publishedDate format='MM YYYY'}}</h3>
+          <br></br>
+           <span class="text-larger"> {{{data.post.content.extended}}}</span>
+			<br></br>
+			<p><a href="/blog">&larr; back to Notice Board</a></p>
+        </div>
+        <div class="col-sm-4 text-left" style="margin: auto">
+          <br></br>
+		  {{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="card-img-top ">{{/if}}
+        </div>
+		</div>
+	</div>
+</div>
 
 	{{>footer}}
 
