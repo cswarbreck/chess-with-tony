@@ -60,12 +60,14 @@ keystone.set('locals', {
 
 // Cloudinary setup
 
-keystone.set('cloudinary config', 
+/* keystone.set('cloudinary config', 
 { 
 	cloud_name: 'dqopfy3b3', 
 	api_key: '467687716374117', 
 	api_secret: '4yzapCALnWdsTCkdyrjJzsAqH0o'
-});
+}); */
+
+keystone.set('cloudinary config', 'cloudinary://467687716374117:4yzapCALnWdsTCkdyrjJzsAqH0o@dqopfy3b3' );
 // or
 
 // Load your project's Routes
