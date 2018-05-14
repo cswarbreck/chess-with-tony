@@ -5,7 +5,7 @@ Chess with Tony is a website that was commissioned by Tony Niccoli, an independe
 
 Tony was looking for a simple, static-looking website, but one that he could update periodically without the need for any coding. Additionally, Tony did not want to use an external CMS like WP, Drupal etc. which left me with a dilemma, as It was impractical for me to be kept on retainer to maintain the site going forward. After looking into a PHP/Laravel back-end setup, I settled on creating a simple NodeJS app that would use MongoDB to create a simple, free CMS that Tony could make posts and receive enquiries.
 
-After further research I found KeystoneJS, a Node-based open-source CMS that handles the backend, but allows the front-end to be customised. Keystone employs the Yeoman generator that, through NPM, installs a ‘blank’ version of Keystone complete with view templates and models ready to launch. I opted to use Handlebars instead of the default Jade templating engine. 
+After further research I found <a href="http://keystonejs.com/">KeystoneJS</a>, a Node-based open-source CMS that handles the backend, but allows the front-end to be customised. Keystone employs the Yeoman generator that, through NPM, installs a ‘blank’ version of Keystone complete with view templates and models ready to launch. I opted to use Handlebars instead of the default Jade templating engine. 
 
 However, the current version of Keystone is somewhat outdated, and most packages in the package.json file needed to be updated at the outset, and crucially, the CMS came loaded with Bootstrap 3, not 4. Updating Bootstrap was the most time-consuming of these initialisation processes but was by no means unachievable. 
 
