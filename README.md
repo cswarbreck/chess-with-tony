@@ -1,7 +1,7 @@
 # chess-with-tony
 <br>
 
-Chess with Tony is a website that was commissioned by Tony Niccoli, an independent children’s chess teacher in West London looking to expand his reach and provide a platform to disseminate information to his customers. 
+<a href="https://arcane-harbor-87041.herokuapp.com/">Chess with Tony</a> is a website that was commissioned by Tony Niccoli, an independent children’s chess teacher in West London looking to expand his reach and provide a platform to disseminate information to his customers. 
 
 Tony was looking for a simple, static-looking website, but one that he could update periodically without the need for any coding. Additionally, Tony did not want to use an external CMS like WP, Drupal etc. which left me with a dilemma, as It was impractical for me to be kept on retainer to maintain the site going forward. After looking into a PHP/Laravel back-end setup, I settled on creating a simple NodeJS app that would use MongoDB to create a simple, free CMS that Tony could make posts and receive enquiries.
 
