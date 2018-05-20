@@ -290,7 +290,8 @@ a {
 		.about-body{
 			padding-top: 3rem;
 			padding-bottom: 3rem;
-			background-color: #111;
+			background-color: white;
+			border-top: 2px solid lightseagreen;
 			@media (min-width: 576px){
 				padding-top: 18rem;
 				padding-bottom: 23rem;
@@ -303,12 +304,13 @@ a {
 				margin-right: 0px;
 		}
 		#about-content{
-			
-			background-color: inherit;
+			color: #222 !important;
+			background-color: white;
 			#about-text{
 				text-align: center;
 				#mug-shot{
 					align-items: center;
+					
 				}
 			}
 			

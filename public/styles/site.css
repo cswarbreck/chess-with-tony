@@ -6339,7 +6339,8 @@ a {
   .about-page .about-body {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: #111; }
+    background-color: white;
+    border-top: 2px solid lightseagreen; }
     @media (min-width: 576px) {
       .about-page .about-body {
         padding-top: 18rem;
@@ -6352,7 +6353,8 @@ a {
         margin-left: 0px;
         margin-right: 0px; } }
     .about-page .about-body #about-content {
-      background-color: inherit;
+      color: #222 !important;
+      background-color: white;
       /* border: 3px double white; */ }
       .about-page .about-body #about-content #about-text {
         text-align: center; }
